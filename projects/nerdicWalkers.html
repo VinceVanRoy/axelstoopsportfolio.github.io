@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#E4D9B9">
+    <title>Nerdic Walkers</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="icon" href="../images/projects/projectFavicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <style>
+        .cursor:last-of-type {
+        background-color: white;
+        }
+    </style> 
+</head>
+
+<body>
+    <nav>
+        <a class="back" href="../index.html#sectionProjects">
+            <img src="../images/icons/cancel.svg" alt="Back to home">
+            Go back
+        </a>
+    </nav>
+       
+    <div class="container clearfix">
+        <h1>Logo for Nerdic Walkers</h1>
+    </div>
+   
+    <div class="container">
+        <img class="projectimg" src="../images/projects/nerdicWalkers/full.png" alt="Logo for Nerdic Walkers"> 
+    </div>
+
+    <i class="cursor"></i>
+    <i class="cursor"></i>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../script/projects.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".projectimg").on("mouseenter", function() {
+                $(".cursor:first-of-type").css({
+                    "background-color" : "white",
+                    "mix-blend-mode" : "difference"
+                });
+            });
+
+            $(".projectimg").on("mouseleave", function() {
+                $(".cursor:first-of-type").css({
+                    "background-color" : "black",
+                    "mix-blend-mode" : "normal"
+                });
+            });
+        });
+    </script>
+</body>
+</html>

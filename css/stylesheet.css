@@ -1,0 +1,398 @@
+/*
+.loading {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #D56969;
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+    position: fixed;
+    left: 47.65%;
+    top: 55%;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+*/
+
+/*—————— General Styles ——————*/
+
+.bold {
+    font-weight: bold;
+}
+
+.block {
+    display: block;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin {
+    margin: 10px 0 40px 0;
+}
+
+
+.clearfix:after {
+    content: " ";
+    clear: both;
+    width: 0;
+    height: 0;
+    display: block;
+}
+
+/*—————— General ——————*/
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /*Prevent horizontal scrolling*/
+}
+
+h1 {
+    font-family: 'Kaushan Script', cursive;
+}
+h2 {
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none; /* Prevent 'mouseenter' and 'mouseleave' event from continously triggering*/
+}
+
+.cursor:first-of-type {
+    background-color: black;
+    z-index: 2;
+}
+
+.cursor:last-of-type {
+    background-color: #D56969;
+}
+
+header {
+    background-image: url(../images/backgrounds/header.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    background-image: url(../images/logo.svg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    background-color: #D0BD8B;
+    padding: 40px 0;
+}
+
+.contact {
+    background-color: #EDE5CD;
+    padding: 40px 0;
+}
+
+footer {
+    background-color: #D66969;
+    background-image: url(../images/backgrounds/geometricPolygon.svg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 0;
+}
+
+/*————————————*/
+
+h1,h2,h3,h4, main img, .pencil {
+    position: relative;
+    z-index: 3;
+}
+
+p {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+main h3, .projects h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    margin: 0;
+    color: white;
+}
+
+main h3 {
+    margin-bottom: 0.5em;
+}
+
+main p {
+    color: white;
+    font-size: 1.2em;
+    margin: 0.5em 0 0 0;
+}
+
+.contact h3 {
+    color: black;
+    margin: 0 0 1em 0;
+}
+
+/*—————— Projects ——————*/
+
+.projects {
+    padding: 0 0 40px 0;
+    background-color: #E4D9B9;
+}
+
+.projects h3 {
+    left: 0.25rem; /* Due to letter-spacing, element wasn't centered properly anymore*/
+}
+
+h4 {
+    color: black;
+    margin: 0;
+}
+
+div.projectTitle {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 60px;
+    margin: 60px auto -10px auto;
+    padding: 0.5em 0 0.9em 0;
+}
+
+.blend {
+    background-image: url(../images/backgrounds/projectsBlend.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0 0 0;
+}
+
+/*—————— Images ——————*/
+
+main img {
+    width: 40px;
+    height: 40px;
+}
+
+.pencil {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 3px; /* Put pencil on end of .projectsBlend */
+}
+
+.projectimg {  
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.help {
+    width: 30px;
+    height: 30px;
+}
+
+.chatIcon {
+    width: 30px;
+    height: 30px;
+}
+
+/*—————— Buttons ——————*/
+
+.btn {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    border: 4px solid black;
+    padding: 0.5rem 0.8rem;
+    box-shadow: -5px 7px rgba(0,0,0,0.5);
+    display: inline-block;
+    transition: all 0.1s;
+}
+
+#startChat {
+    padding-right: 50px;
+    background-image: url(../images/icons/chat.svg);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 90% 50%;
+    margin-bottom: 40px;
+}
+
+.toTop {
+    display: block;
+    background-color: #E4D9B9;
+    background-image: url(../images/icons/backToTop.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 50px;
+}
+
+.btnMusic {
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
+ text-decoration: underline;
+ background-color: #B25757;
+ border: 4px solid white;
+ border-radius: 30%;
+ display: inline-block;
+ padding: 50px 20px 15px 20px;
+ background-image: url(../images/icons/music.svg);
+ background-repeat: no-repeat;
+ background-size: 35px;
+ background-position: 50% 20%;
+ margin-bottom: 40px;
+}
+
+.btnContact {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.7);
+}
+
+/* ——————Chat—————— */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chat li {
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    clear: both;
+    max-width: 100%;
+}
+
+.chatTemp {
+    color: black;
+    background-color: gray;
+    border: 2px solid gray;
+    float: right;
+}
+
+.chat .Q {
+    color: white;
+    background-color: #D66969;
+    border: 2px solid white;
+    float: right;
+}
+
+.chat .A  {
+    color: black;
+    background-color: white;
+    border: 2px solid #D66969;
+    float: left;
+}
+
+.chatContainer {
+    margin: 0 40px;
+}
+
+#startChat:focus {
+    outline: none;
+}
+
+.feedbackForm {
+    padding: 20px 12px !important;
+}
+
+#feedbacktxt {
+    max-width: 100%;
+}
+
+/*—————— Animations ——————*/
+
+.btn:active {
+    box-shadow: none;
+    margin: 7px 5px 0 0; /* margin-top only works if .btn is set to inline-block, otherwise they have 'collapsing' margins*/
+}
+.logo {
+    animation: spin 5s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotateY(0deg); }
+    90% { transform: rotateY(360deg);}
+    100% { transform: rotateY(360deg); }
+}
+
+/*————–— Mediaqueries ——————*/
+
+@media (min-width: 730px) {
+    /*(745px?) 730px seems to be perfect breakpoint for header bg-size transition from cover to auto*/
+    header {
+        background-size: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    .projects li {
+        float: left;
+        width: 50%;
+        /* Thanks to .center class —> don't have to mess with padding or in % */
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects li {
+        width: 33.333%;
+    }
+}
+
+@media (min-width: 1350px) {
+    .blend {
+        background-size: auto; /*Prevent background image from stretching */
+    }
+}
+
+@media (min-width: 1600px) {
+    .projects li {
+        width: 25%;
+    }
+}
+
+
+

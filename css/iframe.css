@@ -1,0 +1,51 @@
+/*—————— Iframe (IMD Sport Club) ——————*/
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+/*————— phone —————*/
+
+.phone {
+    margin: 60px auto 0 auto;
+    width: 225px;
+    height: 450px;
+    border: 4px solid black;
+    border-radius: 1em;
+    transition: all 0.5s ease-out; 
+    background-color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.camera {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0.7em auto 0 auto;
+}
+
+.speaker {
+    border: 1px solid black;
+    width: 60px;
+    height: 6.5px;
+    border-radius:16px;
+    margin: 8px auto 0 auto;
+}
+
+.screen iframe {
+    width: 215px;
+    height: 360px;
+    padding: 5px;
+}
+
+.homebutton {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin: 6px auto;
+    border-radius: 50%;
+}
+
